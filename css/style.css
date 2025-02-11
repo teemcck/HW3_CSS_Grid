@@ -3,25 +3,40 @@
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-
-
+a:hover {
+     text-decoration-line: underline;
+}
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-
+.skip {
+     position: absolute;
+     top: 40px; /* Does this work? */
+}
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-
+.skip:focus {
+     top: 20px; /* Does this work? */
+}
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-
+:focus {
+     border: 2px solid;
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
+.container {
+     display: grid;
+     grid-template-columns: 1fr 5fr 1fr;
+     row-gap: 15px;
+}
 
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-
+.container:first-child {
+     grid-area: span 3;
+}
 
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
