@@ -36,16 +36,39 @@ a:hover {
 first div in the grid  and place it in the grid. */
 .container:first-child {
      grid-area: span 3;
+     background-image: url("images/header.jpg");
 }
 
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
+/*This will be a lot of rules.... but be strategic and combine seletors*/
+.about .method .clients .contact {
+     grid-column-start: 2;
+     grid-area: span 1; /* Is this needed? */ 
+}
 
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
+.about {
+     grid-row-start: 2;
+}
+
+.method {
+     grid-row-start: 3;
+}
+
+.clients {
+     grid-row-start: 4;
+}
+
+.contact {
+     grid-row-start: 5;
+}
 
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
+ .about-image .method-image .clients-image .contact-image {
+     column-span: all; /* Does this work? */
+ }
 
 
 /* Add your media query here */
